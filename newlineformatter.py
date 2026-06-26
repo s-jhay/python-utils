@@ -21,5 +21,5 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     for i in range(0, len(text), CHARS_PER_LINE):
         f.write(text[i:i + CHARS_PER_LINE] + "\n")
 
-print("Done!")
+print(f"Done! Output written to {OUTPUT_FILE}.")
 input("Press Enter to exit...")
