@@ -34,7 +34,7 @@ You need **Python 3** installed on your computer.
 
 Place these files in the same folder:
 
-* `script.py`
+* `newlineformatter.py`
 * `input.txt`
 
 Your folder should look something like this:
@@ -69,7 +69,7 @@ A Command Prompt window will open.
 5. Type:
 
    ```
-   python script.py
+   python newlineformatter.py
    ```
 
 6. Press **Enter**.
@@ -77,7 +77,7 @@ A Command Prompt window will open.
 If that doesn't work, try:
 
 ```
-py script.py
+py newlineformatter.py
 ```
 
 ---
@@ -96,7 +96,7 @@ A new file named `output.txt` will appear in the same folder.
 
 ## Changing the Input or Output File Names
 
-At the top of `script.py` are these lines:
+At the top of `newlineformatter.py` are these lines:
 
 ```python
 INPUT_FILE = "input.txt"
@@ -116,7 +116,7 @@ Python is either not installed or was installed without selecting **Add Python t
 Try:
 
 ```
-py script.py
+py newlineformatter.py
 ```
 
 If that also fails, reinstall Python and make sure **Add Python to PATH** is checked during installation.
@@ -130,17 +130,17 @@ The program could not find `input.txt`.
 Make sure:
 
 * `input.txt` exists.
-* It is in the same folder as `script.py`.
+* It is in the same folder as `newlineformatter.py`.
 * The file name is spelled exactly `input.txt`.
 
 ---
 
 ## Need to Process a Different Number of Lines?
 
-Open `script.py` and change this line:
+Open `newlineformatter.py` and change this line:
 
 ```python
-LINES_PER_GROUP = 145
+CHARS_PER_LINE = 145
 ```
 
 Replace `145` with any number you want.
