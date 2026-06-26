@@ -1,6 +1,6 @@
 INPUT_FILE = "input.txt"
 OUTPUT_FILE = "output.txt"
-CHARS_PER_LINE = 10
+CHARS_PER_LINE = 145
 
 print(f"Looking for {INPUT_FILE}...")
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
