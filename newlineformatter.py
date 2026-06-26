@@ -1,17 +1,25 @@
 INPUT_FILE = "input.txt"
 OUTPUT_FILE = "output.txt"
-LINES_PER_GROUP = 145
+CHARS_PER_LINE = 10
 
-with open(INPUT_FILE, "r", encoding="utf-8") as infile:
-    lines = infile.readlines()
+print(f"Looking for {INPUT_FILE}...")
+with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    text = f.read()
 
-with open(OUTPUT_FILE, "w", encoding="utf-8") as outfile:
-    for i, line in enumerate(lines):
-        outfile.write(line.rstrip("\n"))  # Remove existing newline
-        outfile.write("\n")               # Write the line back
+print("File found!")    
 
-        # Add an extra blank line after every 145 lines
-        if (i + 1) % LINES_PER_GROUP == 0:
-            outfile.write("\n")
+print("Length of input:", len(text))
+print("First 200 characters:")
+print(repr(text[:200]))
 
-print(f"Done! Output written to {OUTPUT_FILE}")
+print("Removing whitespace characters before starting...")
+text = text.replace("\r", "").replace("\n", "")
+print("Length after removing newlines:", len(text))
+
+print("Writing results to output file...")
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    for i in range(0, len(text), CHARS_PER_LINE):
+        f.write(text[i:i + CHARS_PER_LINE] + "\n")
+
+print("Done!")
+input("Press Enter to exit...")
